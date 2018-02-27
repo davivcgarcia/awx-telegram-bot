@@ -8,4 +8,4 @@ env:
   - secure: "naOiwLEKX8cfLioRYfK9j25tQwLmPa2x1QQt//zNzHK4BS70IWr9yvvKSfkctTkWkWPiqwc/PrRFhjl9sMzr9Rr+bIOcTF2YSXWqsU6VoUi4JOdpisrPWHsLqvATiAnAUKyazCMos7R+462nGkhNhpRATKyRHd3fCbP3PaGvvgrnKumPW7DSBzOMtmc54MKBe2z1I7cu4va/Oub/c1POsv0BejI1DP5s/Q1NvuEEo1TueoP83o6nTRyX0SXSJXOYwW7KFOd6CFJmgqPQdKDSo3vFOu6VbdFTEgHLMuFkb97DlVhBF/tvOQJLzC3n012K3FCZm7HJtoqAjKS2+2EGAz84ArKk8AlISzaG5jzvNQdJOTM1S7cfZXQAejuRIrfYqX0bt4YYClBTPpU5mIO7zw7UXKViRqVCJhUVWcdzicS9q+yjjOhgHwYf/WPoN6nrPj1ZyuUcwLpQ8JvwJfHamiM09fSjg1vVTM4ymYtOHMppx+mC3bt8P8qV9kF7xzqadutLB0W1rvOQywLbaeWd+49QMqWQk5NYG6QdpfxLceqhq8AXtkdEPiLw98QL8inscFAbvSJKDKHb+JZwTDVlppZvY3P08yHkD/xlZSILrUuqEX2DBSbjicqkLn7K+xzXP2gpzav5ePoHC/lQwZBYupT7J5VBlgj636kWz21vVc4="
 
 after_success:  
-  - curl -H "Content-Type: application/json" --data '{"build": true}' -X POST https://registry.hub.docker.com/u/${DOCKER_HUB_REPO}/trigger/${DOCKER_HUB_TOKEN}/
+  - 'curl --data build=true -X POST https://registry.hub.docker.com/u/${DOCKER_HUB_REPO}/trigger/${DOCKER_HUB_TOKEN}/'
